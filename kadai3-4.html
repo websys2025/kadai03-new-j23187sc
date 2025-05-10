@@ -40,6 +40,9 @@
                     break;
                 }
             }
+            if (item === null) {
+                console.log("商品番号: " + no + " は存在しません。");
+            } else {
             console.log("商品番号: " + items[i] + ", 商品名: " + items[i].name + "を購入します。");
             if (items[i].stock > 0) {
                 items[i].stock--;
