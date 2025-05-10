@@ -23,9 +23,9 @@
                 console.log("商品は以下の" + items.length + "種類です。");
 
                 // 配列の内容を項目毎に出力
-                  for (let i = 0; i <= items.length; i++){
+                  for (let i = 0; i < items.length; i++){
                       const item = items[i];
-                    console.log("商品番号: "+ items[i] + " 商品名: "  + items.name + " 金額:　"+ items.price + " 在庫数: " + items.stock)
+                    console.log("商品番号: "+ item.id + " 商品名: "  + item.name + " 金額:　"+ item.price + " 在庫数: " + item.stock)
                 }// ここにコードを書く
                 console.log(""); // 空行の出力
             }
