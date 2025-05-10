@@ -23,12 +23,33 @@
                 console.log("商品は以下の" + items.length + "種類です。");
 
                 // 配列の内容を項目毎に出力
-                // ここにコードを書く
-                console.log(""); // 空行の出力
+                  for (let i = 0; i < items.length; i++){
+                      const item = items[i];
+                    console.log("商品番号: "+ item.id + " 商品名: "  + item.name + " 金額:　"+ item.price + " 在庫数: " + item.stock)
+                }// ここにコードを書く
+                console.log(""); // 空行
             }
 
             // 商品購入の関数
             function buyItem(no) {
+                let item = 0;
+
+            for (let i = 0; i < items.length; i++) {
+                if (items[i].id === no) {
+                    item = items[i];
+                    break;
+                }
+            }
+            if (item === null) {
+                console.log("商品番号: " + no + " は存在しません。");
+            } else {
+            console.log("商品番号: " + item.id + ", 商品名: " + item.name + "を購入します。");
+            if (item.stock > 0) {
+                item.stock--;
+            } else {
+                console.log("在庫がありません。");
+            }
+            }
                 // ここにコードを書く
                 showItemList(); // 商品一覧の表示関数呼び出し
             }
