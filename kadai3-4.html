@@ -32,6 +32,14 @@
 
             // 商品購入の関数
             function buyItem(no) {
+                let item = 0;
+
+            for (let i = 0; i < items.length; i++) {
+                if (items[i].id === no) {
+                    item = items[i];
+                    break;
+                }
+            }
                 // ここにコードを書く
                 showItemList(); // 商品一覧の表示関数呼び出し
             }
