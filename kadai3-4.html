@@ -40,6 +40,13 @@
                     break;
                 }
             }
+            console.log("商品番号: " + items[i] + ", 商品名: " + items[i].name + "を購入します。");
+            if (items[i].stock > 0) {
+                items[i].stock--;
+            } else {
+                console.log("在庫がありません。");
+            }
+
                 // ここにコードを書く
                 showItemList(); // 商品一覧の表示関数呼び出し
             }
